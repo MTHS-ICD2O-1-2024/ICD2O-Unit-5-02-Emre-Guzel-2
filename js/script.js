@@ -6,19 +6,24 @@
 
 "use strict"
 // returns a random integer from 1 to 6 into variable "randomNumber"
-const randomNumber = Math.floor(Math.random() * 6) + 1
+const randomNumberPositive = Math.floor(Math.random() * 6) + 1; // 1 to 6
+//const randomNumberNegative = -1 * (Math.floor(Math.random() * 6) + 1)// -1 to -6
 
 function randomNumberGenerator() {
-  // Setting the varibles
-  const usserNumber = parseInt(document.getElementById("user-number").value)
+  // Generate new random numbers each time the function is called
 
-  // Cheking usserNumber is equal to randomNumber
-  if (usserNumber=== randomNumber){
-    // Setting the the statment
-    document.getElementById('result').innerHTML = '<p> You have guessed the corecet number!</p>'
-  }
-  if (usserNumber !== randomNumber) {
-    // Setting the the statment
-    document.getElementById('result').innerHTML = '<p> The correct number was:' + ' '+ randomNumber + '</p>'
-  }
+  // Get user input values
+  const positiveNumber = parseInt(document.getElementById("positive-number").checked);
+  const negativeNumber = parseInt(document.getElementById("negative-number").checked);
+
+  // Check if positive number matches
+  if (positiveNumber === randomNumberPositive) {
+    document.getElementById('result').innerHTML =
+      '<p>The random number is: ' + positiveNumber + '</p>';
+  } else {
+    (negativeNumber === randomNumberNegative) 
+      document.getElementById('result').innerHTML =
+        '<p>The random number is: ' + negativeNumber + '</p>'
+  
+}
 }
