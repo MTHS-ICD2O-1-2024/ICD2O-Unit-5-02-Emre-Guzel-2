@@ -8,17 +8,16 @@
 "use strict"
 
 function randomNumberGenerator() {
-  // Generate a new random number each time the function is called
-  const positiveNumber = document.getElementById("positive-number").checked;
-  //const negativeNumber = document.getElementById("negative-number").checked;
+  // Setting the veribals
+  const positiveNumber = document.getElementById("positive-number").checked
+  let randomNumber
 
-  let randomNumber;
-
+  // Setting the the if and else statment 
   if (positiveNumber) {
-    randomNumber = Math.floor(Math.random() * 6) + 1; // 1 to 6
+    randomNumber = Math.floor(Math.random() * 6) + 1 // 1 to 6
   } else {
     randomNumber = -1 * (Math.floor(Math.random() * 6) + 1); // -1 to -6
   }
   document.getElementById("result").innerHTML =
-    "<p>The random number is: " + randomNumber + "</p>";
+    "<p>The random number is: " + randomNumber + "</p>"
 }
