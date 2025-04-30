@@ -7,17 +7,19 @@
 
 "use strict"
 
+// Setting the randomNumberGenerator as function 
 function randomNumberGenerator() {
   // Setting the veribals
   const positiveNumber = document.getElementById("positive-number").checked
   let randomNumber
 
   // Setting the the if and else statment 
-  if (positiveNumber) {
+  if (positiveNumber === true) {
     randomNumber = Math.floor(Math.random() * 6) + 1 // 1 to 6
   } else {
     randomNumber = -1 * (Math.floor(Math.random() * 6) + 1); // -1 to -6
   }
+  // Gettting the reuslt 
   document.getElementById("result").innerHTML =
     "<p>The random number is: " + randomNumber + "</p>"
 }
