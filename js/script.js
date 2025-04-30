@@ -9,12 +9,12 @@
 
 // Setting the randomNumberGenerator as function 
 function randomNumberGenerator() {
-  // Setting the veribals
+  // Setting the variables
   const positiveNumber = document.getElementById("positive-number").checked
   let randomNumber
 
   // Setting the the if and else statment 
-  if (positiveNumber === true) {
+  if (positiveNumber == true ) {
     randomNumber = Math.floor(Math.random() * 6) + 1 // 1 to 6
   } else {
     randomNumber = -1 * (Math.floor(Math.random() * 6) + 1); // -1 to -6
